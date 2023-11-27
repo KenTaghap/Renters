@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-rror_reporting(E_ERROR | E_PARSE);
+Error_reporting(E_ERROR | E_PARSE);
 
 use MongoDB\Client;
 
