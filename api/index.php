@@ -134,6 +134,9 @@ Tooplate 2123 Simply Amazed
 https://www.tooplate.com/view/2123-simply-amazed
 
 -->
+
+
+
 </head>
 
 <body>
@@ -141,22 +144,35 @@ https://www.tooplate.com/view/2123-simply-amazed
         <header class="header order-last" id="tm-header">
             <nav class="navbar">
                 <div class="collapse navbar-collapse single-page-nav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><span class="icn"><i class="fas fa-th-large"></i></span>Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section-2"><span class="icn"><i class="fas fa-user-tie"></i></span>Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section-3"><span class="icn"><i class="fas fa-tasks"></i></span>Transaction History</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section-4"><span class="icn"><i class="fas fa-tag"></i></span>Rent Details</a>
-                        </li>
-                    </ul>
+                <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#section-1"><span class="icn"><i class="fas fa-th-large"></i></span>Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#section-2" onclick="showSection('section-2')"><span class="icn"><i class="fas fa-user-tie"></i></span>Profile</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#section-3" onclick="showSection('section-3')"><span class="icn"><i class="fas fa-tasks"></i></span>Transaction History</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#section-4" onclick="showSection('section-4')"><span class="icn"><i class="fas fa-tag"></i></span>Rent Details</a>
+    </li>
+</ul>
                 </div>
-                <a href="../index.html" class="nav-link" style="left:80px; top:20px; color:white;"><i class="fas fa-times"></i> logout</a>
+                <a id="logoutButton" class="nav-link" style="left:80px; top:20px; color:white; font-size: 35px;"><i class="fas fa-times"></i> LOGOUT</a>
+                <script>
+    document.getElementById('logoutButton').addEventListener('click', function() {
+      var confirmation = confirm("Are you sure you want to Log out?");
+      
+      if (confirmation) {
+        // Perform logout action here or redirect to logout page
+        // For example: window.location.href = "logout.php";
+        window.location.href = "../index.html";
+      } else {
+        console.log("Logout action canceled");
+      }
+    });
+  </script>
             </nav>
         </header>
         
@@ -172,16 +188,16 @@ https://www.tooplate.com/view/2123-simply-amazed
             <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/section-1-bg.jpg" id="section-1">
                 <div class="container">
                     <div class="item">
-                        <div class="bg-blue-transparent logo-fa"><span><img src="../home/logo.png"  width="200" height="200"></span></div>
-                        <div class="bg-blue-transparent simple"><p>Sana wag na magfinal defense!</p></div>
+                        <div ><span><img src="../home/logo.png"  width="400" height="400"></span></div>
+                        <div ><p style="font-size: 1.5em; font-style: italic; color:white;">"Quality Service at its finest"</p></div>
                     </div>
                 </div>
             </div>
         
-            <section class="work-section section" id="section-2">
+            <section class="work-section section" data-parallax="scroll" data-image-src="../home/img/4.jpg" id="section-2">
                 <div class="container">
                 <div class="title">
-                        <h2>Personal Info</h2>
+                        <h1 style="font-weight: bold; color:white;">Personal Info</h1>
                     </div>
                 <form action="index.php" method="POST">
                 <br>
@@ -234,10 +250,10 @@ https://www.tooplate.com/view/2123-simply-amazed
                 </div>
             </section>
 
-            <section class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/section-3-bg.jpg" id="section-3">
+            <section class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/1.jpg" id="section-3">
                 <div class="container">
                 <div class="title">
-                        <h2>Transaction History</h2>
+                        <h1 style="font-weight: bold; color:black;">Transaction History</h1>
                     </div>
    <form action="index.php" method="POST">
                 <br>
@@ -283,23 +299,23 @@ https://www.tooplate.com/view/2123-simply-amazed
                 </div>
             </section>
 
-            <section class="contact-section section" id="section-4">
+            <section class="contact-section section" data-parallax="scroll" data-image-src="../home/img/3.jpg" id="section-4">
                 <div class="container">
                     <div class="title">
-                        <h3>Rent Details</h3>
+                        <h1 style="font-weight: bold; color:white;">Rent Details</h1>
                     </div>
                     <div class="row">
                         <div class="col-lg-5 col-md-6 mb-4 contact-form">
                             <div class="form tm-contact-item-inner">
                                 
                                     <div class="form-group">
-                                        <label style="color:black;">
+                                        <label style="color:white;">
                                         Electric Bill
                                         </label>
-                                        <input style="color:black;" id="ebill" name="ebill" type="text" class="form-control"  value="<?= $ebill ?>" readonly>
+                                        <input style="color:white;" id="ebill" name="ebill" type="text" class="form-control"  value="<?= $ebill ?>" readonly>
                                     </div>
                                     <div class="form-group">
-                                    <label style="color:black;">
+                                    <label style="color:white;">
                                         Water Bill
                                         </label>
                                         <input style="color:black;" id="wbill" name="wbill" type="text" class="form-control"  value="<?= $wbill ?>" readonly>
@@ -314,6 +330,8 @@ https://www.tooplate.com/view/2123-simply-amazed
                
             </section>
         </main>
+       
+
     </div>
     <script src="../home/js/jquery-3.3.1.min.js"></script>
     <script src="../home/js/bootstrap.bundle.min.js"></script>
@@ -321,5 +339,23 @@ https://www.tooplate.com/view/2123-simply-amazed
     <script src="../home/js/slick.js"></script>
     <script src="../home/js/parallax.min.js"></script>
     <script src="../home/js/templatemo-script.js"></script>
+
+    <script>
+    function showSection(sectionId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        
+        // Display the selected section
+        var selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+</script>
+
+
 </body>
 </html>
