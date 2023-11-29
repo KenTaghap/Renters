@@ -185,7 +185,7 @@ https://www.tooplate.com/view/2123-simply-amazed
         </button>
         
         <main id="content-box" class="order-first">
-            <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/section-1-bg.jpg" id="section-1">
+            <div style="display: block;" class="banner-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/section-1-bg.jpg" id="section-1">
                 <div class="container">
                     <div class="item">
                         <div ><span><img src="../home/logo.png"  width="400" height="400"></span></div>
@@ -194,7 +194,7 @@ https://www.tooplate.com/view/2123-simply-amazed
                 </div>
             </div>
         
-            <section class="work-section section" data-parallax="scroll" data-image-src="../home/img/4.jpg" id="section-2">
+            <section style="display: none;" class="work-section section" data-parallax="scroll" data-image-src="../home/img/4.jpg" id="section-2">
                 <div class="container">
                 <div class="title">
                         <h1 style="font-weight: bold; color:white;">Personal Info</h1>
@@ -250,7 +250,7 @@ https://www.tooplate.com/view/2123-simply-amazed
                 </div>
             </section>
 
-            <section class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/1.jpg" id="section-3">
+            <section style="display: none;" class="gallery-section section parallax-window" data-parallax="scroll" data-image-src="../home/img/1.jpg" id="section-3">
                 <div class="container">
                 <div class="title">
                         <h1 style="font-weight: bold; color:black;">Transaction History</h1>
@@ -299,7 +299,7 @@ https://www.tooplate.com/view/2123-simply-amazed
                 </div>
             </section>
 
-            <section class="contact-section section" data-parallax="scroll" data-image-src="../home/img/3.jpg" id="section-4">
+            <section style="display: none;" class="contact-section section" data-parallax="scroll" data-image-src="../home/img/3.jpg" id="section-4">
                 <div class="container">
                     <div class="title">
                         <h1 style="font-weight: bold; color:white;">Rent Details</h1>
@@ -312,7 +312,7 @@ https://www.tooplate.com/view/2123-simply-amazed
                                         <label style="color:white;">
                                         Electric Bill
                                         </label>
-                                        <input style="color:white;" id="ebill" name="ebill" type="text" class="form-control"  value="<?= $ebill ?>" readonly>
+                                        <input style="color:black;" id="ebill" name="ebill" type="text" class="form-control"  value="<?= $ebill ?>" readonly>
                                     </div>
                                     <div class="form-group">
                                     <label style="color:white;">
@@ -355,6 +355,7 @@ https://www.tooplate.com/view/2123-simply-amazed
         }
     }
 </script>
+
 
 
 </body>
